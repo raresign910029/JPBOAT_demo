@@ -18,7 +18,7 @@ body {
     margin: 0;
 }
 
-.loading_start{
+.loading_start {
     .loadingbg {
         background-color: #f24;
         width: 100vw;
@@ -62,50 +62,54 @@ body {
         padding-left: 15px;
         height: 100%;
         position: relative;
-            .remove{
-                position:absolute;
-                top:108px;
-                right: 15px;
-                opacity: 0;
-                text-align: right;
-                pointer-events: none;
-                
-            }
-            
-        
-       
-       
+
+        .remove {
+            position: absolute;
+            top: 108px;
+            right: 15px;
+            opacity: 0;
+            text-align: right;
+            pointer-events: none;
+
+        }
+
+
+
+
 
         @media screen and(max-width:992px) {
             flex-direction: row-reverse;
             position: relative;
             justify-content: space-around;
-            .remove.active{
+
+            .remove.active {
                 font-size: $font-size-third;
-                position:absolute;
-                top:108px;
+                position: absolute;
+                top: 108px;
                 right: 15px;
                 opacity: 1;
                 pointer-events: unset;
                 text-align: right;
                 z-index: 11;
-                
+
             }
-            .remove.active:hover{
-               color: white;
-               cursor: pointer; 
+
+            .remove.active:hover {
+                color: white;
+                cursor: pointer;
             }
+
             .nav_logo {
                 flex: 3;
 
-                
+
             }
 
-        
+
             .navbar-toggler {
                 flex: 2;
             }
-        
+
         }
 
         @media screen and(max-width:768px) {
@@ -322,6 +326,7 @@ body {
                         line-height: $font-size-second;
                         vertical-align: bottom;
                         padding-top: 15pt;
+                        text-align: justify;
                     }
                 }
 
@@ -344,6 +349,7 @@ body {
                         line-height: $font-size-second;
                         vertical-align: bottom;
                         padding: 0 0 0 65px;
+                        text-align: justify;
                     }
                 }
 
@@ -420,11 +426,9 @@ body {
     background-image: url('../img/個人專題素材收集/海浪/94236.jpg');
     background-size: cover;
     width: 100%;
-    height: 100vh;
 
-    @media screen and(max-width:992px) {
-        height: unset;
-    }
+
+    @media screen and(max-width:992px) {}
 
     .container {
         .row {
@@ -450,12 +454,12 @@ body {
 
                 .subtitle-box {
                     .title {
-                        
+
                         padding-top: 15px;
                         line-height: 49pt;
                         text-align: center;
                         font-size: $font-size-fourth;
-                        
+
 
                     }
                 }
@@ -479,15 +483,18 @@ body {
                         .tasteBox.original {
                             color: rgb(209, 126, 17);
                             text-shadow: white 1px 1px 0px;
+
                         }
 
                         .tasteBox.mustard {
                             color: #139c33;
                             text-shadow: white 1px 1px 0px;
+
                         }
 
                         img {
                             width: 100%;
+                            margin-bottom: 40px;
                         }
                     }
                 }
@@ -504,34 +511,115 @@ body {
         .row {
             display: flex;
             justify-content: space-around;
+            // 版本一
+            // .col {
+            //     display: flex;
+            //     justify-content: center;
+            //     background-color: rgb(29, 45, 97);
+
+            //     // rgb(57, 83, 170) NAV色
+            //     // background-color: #B6C5D8;  海浪藍
+            //     // background-color: #546B94;  深海藍
+
+            //     .cards {
+
+            //         margin: 48px 0;
+
+            // .card-idea-title {
+            //     max-width: 140px;
+            //     padding-top: 15px;
+            //     line-height: $font-size-third;
+            //     border: 4px solid white;
+            //     text-align: center;
+            //     font-size: $font-size-third;
+            //     margin: 0 auto;
+            //     color: white;
+
+            // }
+            // .card-idea-title.honesty {
+            //     color: black;
+            //     border: 4px solid black;
+            // }
+
+            // .card-idea-content {
+            //     color: white;
+            //     text-align: center;
+            //     font-size: $font-size-fourth;
+            //     margin: 0 auto;
+            // }
+            // .card-idea-content.honesty {
+            //     color: black;
+
+            // }
+            // }
+            // }
+            // .honesty{
+            //     background-color: rgb(157, 194, 243);
+            // }
+
+            // 版本二
+            .col.quality {
+                background-image: url('../img/日船章魚小丸子.PNG');
+                height: 500px;
+            }
+
+            .col.honesty {
+                background-image: url('../img/日船章魚小丸子.PNG');
+                height: 500px;
+            }
+
+            .col.share {
+                background-image: url('../img/日船章魚小丸子.PNG');
+                height: 500px;
+            }
 
             .col {
                 display: flex;
                 justify-content: center;
-                background-color: rgb(29, 45, 97);
+                position: relative;
 
-                // rgb(57, 83, 170) NAV色
-                // background-color: #B6C5D8;  海浪藍
-                // background-color: #546B94;  深海藍
+                .mask {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    z-index: 2;
+                }
 
                 .cards {
+                    display: none;
+                }
 
-                    margin: 48px 0;
+
+            }
+
+            .col:hover {
+                position: relative;
+
+                .mask {
+                    opacity: 1;
+                    z-index: 2;
+                }
+
+                .cards {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
 
                     .card-idea-title {
                         max-width: 140px;
                         padding-top: 15px;
                         line-height: $font-size-third;
-                        border: 4px solid white;
+                        // border: 4px solid white;
                         text-align: center;
                         font-size: $font-size-third;
                         margin: 0 auto;
                         color: white;
+                        z-index: 3;
 
-                    }
-                    .card-idea-title.honesty {
-                        color: black;
-                        border: 4px solid black;
                     }
 
                     .card-idea-content {
@@ -539,18 +627,11 @@ body {
                         text-align: center;
                         font-size: $font-size-fourth;
                         margin: 0 auto;
+                        z-index: 3;
                     }
-                    .card-idea-content.honesty {
-                        color: black;
-                        
-                    }
+
                 }
             }
-            .honesty{
-                background-color: rgb(157, 194, 243);
-            }
-
-
         }
     }
 }
@@ -583,19 +664,26 @@ body {
 
                 .circle {
                     align-items: center;
-                    background-color: green;
-                    width: 200px;
-                    height: 200px;
-                    border-radius: 100px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    background-image: url('../img/TAKOYAKI-N.png');
+                    width: 150px;
+                    height: 250px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .circle.middle {
 
-                    p {
-                        font-size: $font-size-second;
-                        line-height: $font-size-second;
-                        margin: 0;
-                    }
+                    background-image: url('../img/TAKOYAKI-M.png');
+        
+                }
+                .circle.south {
+                    
+                    background-image: url('../img/TAKOYAKI-S.png');
+        
+                }
+                .circle.east {
+                    
+                    background-image: url('../img/TAKOYAKI-E.png');
+        
                 }
             }
         }
@@ -614,7 +702,7 @@ body {
 
                 display: flex;
                 justify-content: center;
-                
+
                 .title-box {
                     max-width: 50%;
                     margin: 48px 0;
@@ -721,11 +809,13 @@ body {
 
 footer {
     width: 100%;
-    .container{
-        .row{
+
+    .container {
+        .row {
             display: flex;
             justify-content: center;
-            .col{
+
+            .col {
                 text-align: center;
             }
         }
