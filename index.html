@@ -44,24 +44,26 @@
 
     <link rel="stylesheet" href="./css/jpboat.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
     <title>日船章魚小丸子</title>
 </head>
 
 <body>
-    <section class="loading_start">
+    <!-- <section class="loading_start">
         <div class="loadingbg">
             <div class="loadbar">
                 <div class="loading"></div>
             </div>
             <h2 id="percent">100%</h2>
         </div>
-    </section>
+    </section> -->
 
     <div class="nav_section">
         <nav class="container navbar navbar-expand-lg ">
             <!-- X  收合 -->
             <div class="remove " id="remove_btn" title="收合選單">X</div>
-            <!-- <div class="back_top " id="back_top" title="回到頁首" >^</div> -->
+            <i class="go-top fas fa-arrow-circle-up fa-3x" id="back_top" title="回到頁首"></i>
             <a class="nav_logo navbar-brand " href="#jpboat_start">
                 <img src="./img/日船Logo.jpg" width="151" , height="
                 89" alt="" title="日船 JPBOAT │ 章魚燒第一品牌">
@@ -78,16 +80,16 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#jpboat_start">日船章魚燒</a>
+                        <a class="nav-link" id ="homepage" href="#jpboat_start">日船章魚燒</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#classicTaste">經典口味</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">分店一覽</a>
+                        <a class="nav-link" href="#branches">分店一覽</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">加盟日船</a>
+                        <a class="nav-link" href="#join_us">加盟日船</a>
                     </li>
                 </ul>
             </div>
@@ -131,43 +133,30 @@
                                 <div class="modal-dialog modal-full" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Modal</h5>
+                                            <h5 class="modal-title">日船章魚小丸子--緣起</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">×</span>
                                             </button>
                                         </div>
                                         <div class="modal-body p-4" id="result">
-                                            <p>The grid inside the modal is responsive too..</p>
                                             <div class="row">
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
+                                                <div class="col col-12 col-md-12 col-lg-6 col-xl-3">
+                                                    起
                                                 </div>
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
+                                                <div class="col col-12 col-md-12 col-lg-6 col-xl-3">
+                                                    承
                                                 </div>
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
+                                                <div class="col col-12 col-md-12 col-lg-6 col-xl-3">
+                                                    轉
                                                 </div>
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
-                                                </div>
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
-                                                </div>
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
-                                                </div>
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
-                                                </div>
-                                                <div class="col-sm-6 col-lg-3">
-                                                    Content
+                                                <div class="col col-12 col-md-12 col-lg-6 col-xl-3">
+                                                    合
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">OK</button>
+                                                data-dismiss="modal">Close</button>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +244,7 @@
         <!-- 日船理念 滿版 結束 -->
 
         <!-- 分店一覽 開始 -->
-        <section class="branches">
+        <section class="branches" id="branches">
             <div class="container">
                 <div class="row">
                     <div class="col col-12">
@@ -295,7 +284,7 @@
         <!-- 分店一覽 結束 -->
 
         <!-- 網友推薦 開始 -->
-        <section class="netizen_comment ">
+        <!-- <section class="netizen_comment ">
             <div class="container full">
                 <div class="row">
                     <div class="col col-12">
@@ -319,14 +308,14 @@
 
                             </div>
                             <!-- Add Pagination -->
-                            <div class="swiper-pagination"></div>
+                            <!-- <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </section>
-
+        </section> -->
+ 
 
         <!-- 網友推薦 結束 -->
 
@@ -417,9 +406,9 @@
         var remove_btn = document.querySelector('#remove_btn');
 
         var navbar_toggler = document.querySelector('.navbar-toggler');
-
         var back_top = document.querySelector('#back_top');
 
+        var jp_homepage = document.querySelector('#homepage');
         //   var navbarNavDropdown = document.querySelector('#navbarNavDropdown');
 
         remove_btn.onclick = function () {
@@ -436,7 +425,7 @@
 
         back_top.onclick = function () {
 
-
+            jp_homepage.click();
 
         }
 
