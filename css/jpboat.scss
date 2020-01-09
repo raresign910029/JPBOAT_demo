@@ -16,12 +16,12 @@ sans-serif;
 
 body {
     margin: 0;
-    
+
 }
 
 body.modal-open {
     padding-right: 0 !important;
-    
+
 }
 
 .loading_start {
@@ -78,23 +78,26 @@ body.modal-open {
             pointer-events: none;
 
         }
+
         .go-top {
             position: absolute;
             top: 80vh;
             right: -80px;
-        
+
         }
+
         .go-top:hover {
             transform: scaleX(1.2) scaleY(1.2);
             transition: 0.5s;
-        
+
         }
+
         @media screen and(max-width:1300px) {
             .go-top {
                 position: absolute;
                 top: 80vh;
                 right: -40px;
-            
+
             }
         }
 
@@ -104,7 +107,7 @@ body.modal-open {
                 position: absolute;
                 top: 80vh;
                 right: -15px;
-            
+
             }
         }
 
@@ -136,7 +139,7 @@ body.modal-open {
                 position: absolute;
                 top: 80vh;
                 right: -30px;
-            
+
             }
 
             .nav_logo {
@@ -157,9 +160,9 @@ body.modal-open {
                 position: absolute;
                 top: 80vh;
                 right: 0px;
-            
+
             }
-            
+
             .nav_logo {
                 flex: 3;
             }
@@ -176,9 +179,9 @@ body.modal-open {
                 position: absolute;
                 top: 80vh;
                 right: 0px;
-            
+
             }
-            
+
             .nav_logo {
                 flex: 7;
             }
@@ -425,9 +428,10 @@ body.modal-open {
 
                     .modal {
                         padding-right: 0px !important;
+
                         .modal-dialog {
                             max-width: 100% !important;
-                            
+
                             .modal-content {
                                 .row {
                                     .col {
@@ -462,9 +466,9 @@ body.modal-open {
 //完整故事 更多點我看 互動視窗
 
 .modal-dialog {
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 
 
@@ -472,34 +476,111 @@ body.modal-open {
         height: auto;
         min-height: 100vh;
         border-radius: 0;
-        .modal-header{
+
+        .modal-header {
             background-color: rgb(57, 83, 170);
-            .modal-title{
+
+            .modal-title {
                 color: white;
-                margin-left: calc( 50% - 95px )
+                margin-left: calc(50% - 95px)
             }
-            .close:hover{
+
+            .close:hover {
                 cursor: pointer;
                 color: white;
             }
         }
-        .modal-body{
+
+        .modal-body {
             background-color: rgb(255, 199, 84);
-            .row{
-                .col{
+            display: flex;
+            align-items: center;
+
+            .row {
+                display: flex;
+                align-items: center;
+
+                .col {
                     height: 50%;
+
+                    .content {
+                        display: none;
+                    }
+
+                    @media screen and(max-width:1200px) {
+                        height: 50%;
+                        padding: 15px;
+                    }
+
+                    @media screen and(max-width:992px) {
+                        img {
+                            max-width: 525px;
+                            height: 70vh;
+                        }
+
+                    }
+
+                    @media screen and(max-width:768px) {
+                        img {
+                            max-width: 100%;
+                        }
+
+                    }
                 }
+
+                .col:hover {
+                    .content {
+                        height: 664px;
+                        display: block;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            font-size: $font-size-fourth;
+                            text-align: justify;
+                        }
+                    }
+
+                    @media screen and(max-width:1200px) {
+                        .content {
+                            height: 664px;
+                        }
+                    }
+                    @media screen and(max-width:768px) {
+                        .content {
+                            height: 50vh;
+                        }
+                    }
+                    @media screen and(max-width:576px) {
+                        .content {
+                            height: 70vh;
+                        }
+                    }
+                    img {
+                        display: none;
+
+                    }
+                }
+
+
             }
         }
-        .modal-footer{
+
+        .modal-footer {
             background-color: rgb(57, 83, 170);
-            ;
-            .btn{
-                background-color: #139c33;
+
+            .btn {
+                background-color: rgb(255, 199, 84);
+            }
+
+            .btn:hover {
+                background-color: rgb(57, 83, 170);
+                color: white;
             }
         }
     }
-    
+
 
 }
 
@@ -510,7 +591,7 @@ body.modal-open {
     width: 100%;
 
 
-    @media screen and(max-width:992px) {}
+
 
     .container {
         .row {
@@ -752,20 +833,23 @@ body.modal-open {
                     background-size: contain;
                     background-repeat: no-repeat;
                 }
+
                 .circle.middle {
 
                     background-image: url('../img/TAKOYAKI-M.png');
-        
+
                 }
+
                 .circle.south {
-                    
+
                     background-image: url('../img/TAKOYAKI-S.png');
-        
+
                 }
+
                 .circle.east {
-                    
+
                     background-image: url('../img/TAKOYAKI-E.png');
-        
+
                 }
             }
         }

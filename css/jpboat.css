@@ -449,9 +449,9 @@ body.modal-open {
 }
 
 .modal-dialog {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -467,7 +467,7 @@ body.modal-open {
 
 .modal-dialog .modal-content .modal-header .modal-title {
   color: white;
-  margin-left: calc( 50% - 95px);
+  margin-left: calc(50% - 95px);
 }
 
 .modal-dialog .modal-content .modal-header .close:hover {
@@ -477,10 +477,90 @@ body.modal-open {
 
 .modal-dialog .modal-content .modal-body {
   background-color: #ffc754;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-dialog .modal-content .modal-body .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-dialog .modal-content .modal-body .row .col {
   height: 50%;
+}
+
+.modal-dialog .modal-content .modal-body .row .col .content {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-dialog .modal-content .modal-body .row .col {
+    height: 50%;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .modal-dialog .modal-content .modal-body .row .col img {
+    max-width: 525px;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-dialog .modal-content .modal-body .row .col img {
+    max-width: 100%;
+  }
+}
+
+.modal-dialog .modal-content .modal-body .row .col:hover .content {
+  height: 664px;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-dialog .modal-content .modal-body .row .col:hover .content p {
+  font-size: 20.3pt;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-dialog .modal-content .modal-body .row .col:hover .content {
+    height: 664px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-dialog .modal-content .modal-body .row .col:hover .content {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modal-dialog .modal-content .modal-body .row .col:hover .content {
+    height: 70vh;
+  }
+}
+
+.modal-dialog .modal-content .modal-body .row .col:hover img {
+  display: none;
 }
 
 .modal-dialog .modal-content .modal-footer {
@@ -488,7 +568,12 @@ body.modal-open {
 }
 
 .modal-dialog .modal-content .modal-footer .btn {
-  background-color: #139c33;
+  background-color: #ffc754;
+}
+
+.modal-dialog .modal-content .modal-footer .btn:hover {
+  background-color: #3953aa;
+  color: white;
 }
 
 .bg-classicTaste {
