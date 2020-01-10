@@ -88,10 +88,28 @@ body.modal-open {
   transition: 0.5s;
 }
 
+.nav_section .container .branches_btn {
+  position: absolute;
+  top: calc(80vh + 60px);
+  right: -80px;
+}
+
+.nav_section .container .branches_btn:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 @media screen and (max-width: 1300px) {
   .nav_section .container .go-top {
     position: absolute;
     top: 80vh;
+    right: -40px;
+  }
+  .nav_section .container .branches_btn {
+    position: absolute;
+    top: calc(80vh + 60px);
     right: -40px;
   }
 }
@@ -100,6 +118,11 @@ body.modal-open {
   .nav_section .container .go-top {
     position: absolute;
     top: 80vh;
+    right: -15px;
+  }
+  .nav_section .container .branches_btn {
+    position: absolute;
+    top: calc(80vh + 60px);
     right: -15px;
   }
 }
@@ -889,7 +912,7 @@ body.modal-open {
 
 .join_us {
   width: 100%;
-  background-color: gray;
+  background-color: #ffed9e;
 }
 
 .join_us .container {
@@ -897,7 +920,7 @@ body.modal-open {
 }
 
 .join_us .container .row .col .title-box {
-  max-width: 50%;
+  max-width: 350px;
   margin: 48px auto;
 }
 
@@ -933,12 +956,9 @@ body.modal-open {
   max-width: 240px;
 }
 
-.join_us .container .row .col .title-box.detail a:hover {
-  color: white;
-}
-
 .join_us .container .row .col .title-box.detail a:hover .content {
   background-color: #3953aa;
+  color: white;
 }
 
 footer {

@@ -92,12 +92,29 @@ body.modal-open {
 
         }
 
+        .branches_btn{
+            position: absolute;
+            top: calc(80vh + 60px);
+            right: -80px;
+        }
+
+        .branches_btn:hover {
+            transform: rotate(360deg); 
+            transition: 0.4s;
+
+        }
+
         @media screen and(max-width:1300px) {
             .go-top {
                 position: absolute;
                 top: 80vh;
                 right: -40px;
 
+            }
+            .branches_btn{
+                position: absolute;
+                top: calc(80vh + 60px);
+                right: -40px;
             }
         }
 
@@ -108,6 +125,11 @@ body.modal-open {
                 top: 80vh;
                 right: -15px;
 
+            }
+            .branches_btn{
+                position: absolute;
+                top: calc(80vh + 60px);
+                right: -15px;
             }
         }
 
@@ -965,16 +987,15 @@ body.modal-open {
 // 加盟入內
 .join_us {
     width: 100%;
-    background-color: gray;
+    background-color: rgb(255, 237, 158);
 
     .container {
         max-width: 100%;
 
         .row {
             .col {
-
                 .title-box {
-                    max-width: 50%;
+                    max-width: 350px;
                     margin: 48px auto;
 
                     .content {
@@ -995,7 +1016,7 @@ body.modal-open {
                 }
 
                 .title-box.detail {
-
+                    
                     a {
 
                         text-decoration: none;
@@ -1021,10 +1042,11 @@ body.modal-open {
                     max-width: 240px;
 
                     a:hover {
-                        color: white;
+                        
 
                         .content {
                             background-color: rgb(57, 83, 170);
+                            color: white;
                         }
                     }
                 }
