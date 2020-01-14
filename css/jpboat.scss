@@ -1,9 +1,9 @@
 // 字體大小
 
-$font-size-first : 98pt;
-$font-size-second : 49pt;
-$font-size-third : 27.1pt;
-$font-size-fourth : 20.3pt;
+$font-size-first : 60pt;
+$font-size-second : 30pt;
+$font-size-third : 22pt;
+$font-size-fourth : 18pt;
 
 // 字型
 $font_FanHei: adobe-fan-heiti-std,
@@ -23,6 +23,23 @@ body.modal-open {
     padding-right: 0 !important;
 
 }
+
+.remove {
+    display: none !important;
+}
+
+// .show {
+//     display: flex;
+//     height: 664px;
+//     display: block;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+//     p {
+//         font-size: $font-size-fourth;
+//         text-align: justify;
+//     }
 
 .loading_start {
     .loadingbg {
@@ -92,14 +109,14 @@ body.modal-open {
 
         }
 
-        .branches_btn{
+        .branches_btn {
             position: absolute;
             top: calc(80vh + 60px);
             right: -80px;
         }
 
         .branches_btn:hover {
-            transform: rotate(360deg); 
+            transform: rotate(360deg);
             transition: 0.4s;
 
         }
@@ -111,7 +128,8 @@ body.modal-open {
                 right: -40px;
 
             }
-            .branches_btn{
+
+            .branches_btn {
                 position: absolute;
                 top: calc(80vh + 60px);
                 right: -40px;
@@ -126,7 +144,8 @@ body.modal-open {
                 right: -15px;
 
             }
-            .branches_btn{
+
+            .branches_btn {
                 position: absolute;
                 top: calc(80vh + 60px);
                 right: -15px;
@@ -455,15 +474,30 @@ body.modal-open {
                             max-width: 100% !important;
 
                             .modal-content {
+                                .modal-body {
+                                    background-image: url('../img/Modal-bg.jpg');
+                                    background-size: cover;
+
+                                }
+
                                 .row {
                                     .col {
-                                        .card {
-                                            img {
-                                                color: black;
-                                                // 多
-                                            }
+                                        img {
+                                            color: black;
+                                            // 多
+                                        }
+
+                                        .content {
+                                            background-color: #eeeeee86;
+                                            height: 664px;
+                                            display: block;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+
                                         }
                                     }
+
                                 }
 
                             }
@@ -514,7 +548,7 @@ body.modal-open {
         }
 
         .modal-body {
-            background-color: rgb(255, 199, 84);
+
             display: flex;
             align-items: center;
 
@@ -524,10 +558,6 @@ body.modal-open {
 
                 .col {
                     height: 50%;
-
-                    .content {
-                        display: none;
-                    }
 
                     @media screen and(max-width:1200px) {
                         height: 50%;
@@ -550,43 +580,43 @@ body.modal-open {
                     }
                 }
 
-                .col:hover {
-                    .content {
-                        height: 664px;
-                        display: block;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                // .col:hover {
+                //     .content {
+                //         height: 664px;
+                //         display: block;
+                //         display: flex;
+                //         justify-content: center;
+                //         align-items: center;
 
-                        p {
-                            font-size: $font-size-fourth;
-                            text-align: justify;
-                        }
-                    }
+                //         p {
+                //             font-size: $font-size-fourth;
+                //             text-align: justify;
+                //         }
+                //     }
 
-                    @media screen and(max-width:1200px) {
-                        .content {
-                            height: 664px;
-                        }
-                    }
+                //     @media screen and(max-width:1200px) {
+                //         .content {
+                //             height: 664px;
+                //         }
+                //     }
 
-                    @media screen and(max-width:768px) {
-                        .content {
-                            height: 50vh;
-                        }
-                    }
+                //     @media screen and(max-width:768px) {
+                //         .content {
+                //             height: 50vh;
+                //         }
+                //     }
 
-                    @media screen and(max-width:576px) {
-                        .content {
-                            height: 70vh;
-                        }
-                    }
+                //     @media screen and(max-width:576px) {
+                //         .content {
+                //             height: 70vh;
+                //         }
+                //     }
 
-                    img {
-                        display: none;
+                //     img {
+                //         display: none;
 
-                    }
-                }
+                //     }
+                // }
 
 
             }
@@ -918,13 +948,14 @@ body.modal-open {
 
             .row {
                 width: 100%;
-                
+
 
                 .col {
 
                     .card {
                         background-color: #eeeeee;
-                        .card-body{
+
+                        .card-body {
                             padding: 10px 7px;
                         }
                     }
@@ -1016,7 +1047,7 @@ body.modal-open {
                 }
 
                 .title-box.detail {
-                    
+
                     a {
 
                         text-decoration: none;
@@ -1042,7 +1073,7 @@ body.modal-open {
                     max-width: 240px;
 
                     a:hover {
-                        
+
 
                         .content {
                             background-color: rgb(57, 83, 170);
